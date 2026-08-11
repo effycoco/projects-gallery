@@ -1,13 +1,19 @@
-const ProjectCard = ({name,link, img}) => {
+import {FaGithub} from 'react-icons/fa'
+const ProjectCard = ({ name, link, img,github }) => {
   return (
-    <a href={link} className="card-link">
-      <div className="img-container">
-        <img src={img} alt={name+ ' preview'} className="preview-img" />
-      </div>
+    <article className="card">
+      <a href={link} >
+        <div className="img-container">
+          <img src={img} alt={name+ ' preview'} className="preview-img" />
+        </div>
+      </a>
       <footer>
-        <h5>{name}</h5>
+        <h2>{name}</h2>
+        <a href={github}>
+          <FaGithub className="icon" />
+        </a>
       </footer>
-    </a>
+    </article>
   )
 }
 
