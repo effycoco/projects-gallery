@@ -2,7 +2,7 @@ import {FaGithub} from 'react-icons/fa'
 const ProjectCard = ({ name, link, img,github }) => {
   return (
     <article className="card">
-      <a href={link} >
+      <a href={link} target="_blank" >
         <div className="img-container">
           <img src={img} alt={name+ ' preview'} className="preview-img" />
         </div>
